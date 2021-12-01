@@ -1,0 +1,64 @@
+{
+    "name": "capproduct",
+    "version": "1.0.3",
+    "description": "A simple access to the JTE service in Jx5",
+    "repository": "<Add your repository here>",
+    "license": "UNLICENSED",
+    "private": true,
+    "engines": {
+        "node": "^14"
+    },
+    "dependencies": {
+        "@sap/cds": "^5",
+        "express": "^4"
+    },
+    "devDependencies": {
+        "@sap/ux-specification": "^1.90.15",
+        "sqlite3": "^5.0.2",
+        "ui5-task-zipper": "^0.4.7"
+    },
+    "scripts": {
+        "start": "cds run",
+        "undeploy": "cf undeploy capproduct --delete-services --delete-service-keys"
+    },
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "env": {
+            "es2020": true,
+            "node": true,
+            "jest": true,
+            "mocha": true
+        },
+        "globals": {
+            "SELECT": true,
+            "INSERT": true,
+            "UPDATE": true,
+            "DELETE": true,
+            "CREATE": true,
+            "DROP": true,
+            "CDL": true,
+            "CQL": true,
+            "CXL": true,
+            "cds": true
+        },
+        "rules": {
+            "no-console": "off",
+            "require-atomic-updates": "off"
+        }
+    },
+    "cds": {
+        "requires": {
+            "ZAS_OEM_PRODUCT_JTE_SRV": {
+                "kind": "odata-v2",
+                "model": "srv/external/ZAS_OEM_PRODUCT_JTE_SRV",
+                "credentials": {
+                    "destination": "Gateway_SSO",
+                    "path": "/sap/opu/odata/sap/ZAS_OEM_PRODUCT_JTE_SRV"
+                }
+            }
+        }
+    },
+    "sapux": [
+        "app/capproduct"
+    ]
+}

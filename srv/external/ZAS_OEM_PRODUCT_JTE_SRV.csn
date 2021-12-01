@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.6.4"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZAS_OEM_PRODUCT_JTE_SRV": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "ZAS_OEM_PRODUCT_JTE_SRV.ProductSet": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.content.version": "1",
+      "elements": {
+        "Material": {
+          "key": true,
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Konfig.Material",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Serialnumber": {
+          "key": true,
+          "type": "cds.String",
+          "length": 18,
+          "@sap.unicode": "false",
+          "@sap.label": "Serialnummer",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "Description": {
+          "type": "cds.String",
+          "length": 40,
+          "@sap.unicode": "false",
+          "@sap.label": "Bezeichnung",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        },
+        "DateOfConstruction": {
+          "type": "cds.DateTime",
+          "@sap.unicode": "false",
+          "@sap.label": "Mont.-Start",
+          "@sap.creatable": "false",
+          "@sap.updatable": "false",
+          "@sap.sortable": "false",
+          "@sap.filterable": "false"
+        }
+      }
+    }
+  }
+}

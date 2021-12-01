@@ -1,0 +1,13 @@
+GET http://localhost:34691/product/Products
+###
+GET http://localhost:34691/Product/Products(Material='51129688',Serialnumber='ST3X00000007')
+###
+POST http://localhost:34691/Product/Products HTTP/1.1
+content-type:	application/json
+
+{
+    "Material" : "51129688",
+    "Serialnumber" : "JT0000001012",
+    "Description" : "JT energy battery pack "
+  
+}
